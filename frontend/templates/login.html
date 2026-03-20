@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinAI | Iniciar Sesión Profresional</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/zorro.css') }}">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="pro-login-body">
+
+<div class="pro-login-wrapper">
+
+    <div class="login-split-container">
+        
+        <div class="form-panel">
+            
+            <h1 class="form-title">Iniciar sesión</h1>
+
+            <form class="pro-form" method="POST" action="{{ url_for('auth.login') }}">
+
+                <div class="input-group-pro">
+                    <i class="fas fa-fingerprint icon"></i>
+                    <select name="document_type" required>
+                        <option value="" disabled selected>Tipo de documento</option>
+                        <option value="CC">Cédula de Ciudadanía</option>
+                        <option value="CE">Cédula de Extranjería</option>
+                        <option value="TI">Tarjeta de Identidad</option>
+                        <option value="PAS">Pasaporte</option>
+                    </select>
+                </div>
+
+                <div class="input-group-pro">
+                    <i class="fas fa-id-card icon"></i>
+                    <input type="text" name="document_number" placeholder="Número de documento" required>
+                </div>
+
+                <div class="input-group-pro">
+                    <i class="fas fa-envelope icon"></i>
+                    <input type="email" name="email" placeholder="Correo electrónico" required>
+                </div>
+
+                <div class="input-group-pro">
+                    <i class="fas fa-lock icon"></i>
+                    <input type="password" name="password" placeholder="Contraseña" required>
+                </div>
+
+                <button type="submit" class="btn-login-main">Entrar</button>
+
+            </form>
+            
+            <div class="form-footer-link">
+                 <a href="#" class="link-secondary">¿Olvidaste tu contraseña?</a>
+            </div>
+
+        </div> <div class="welcome-panel">
+            
+            <div class="pro-logo-section">
+                <img src="{{ url_for('static', filename='img/zorro.png') }}" class="main-logo" alt="FinAI">
+            </div>
+
+            <h2 class="welcome-title">¡Bienvenido de nuevo!</h2>
+            <p class="welcome-subtitle">Gestiona tus finanzas con la inteligencia de FinAI.</p>
+            
+            <p class="account-prompt">¿No tienes cuenta?</p>
+            
+            <a href="{{ url_for('auth.register') }}" class="btn-outlined-register">Regístrate</a>
+
+        </div> </div> </div> </body>
+</html>

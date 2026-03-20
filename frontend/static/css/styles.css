@@ -1,0 +1,203 @@
+/* DEFINICIÓN DE COLORES PROFESIONALES (Negro/Blanco/Gris) */
+:root {
+    --bg-main: #212529;      /* Gris muy oscuro para el fondo (Referencia) */
+    --card-bg: #1a1d21;     /* Negro mate para la tarjeta del formulario */
+    --text-main: #ffffff;   /* Blanco puro para títulos y texto */
+    --text-muted: #a1a7ab;  /* Gris claro para subtítulos y placeholders */
+    --input-bg: #2c3136;    /* Gris oscuro para el fondo de los inputs */
+    --input-border: #3f454d; /* Borde sutil gris para inputs */
+    --accent-white: #ffffff; /* Blanco para el botón principal */
+    --accent-dark: #111111;  /* Negro para el texto del botón principal */
+}
+
+/* RESET GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* CONTENEDOR PRINCIPAL CENTRADO */
+.pro-register-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* TARJETA DE REGISTRO (Negro Mate) */
+.pro-register-card {
+    width: 100%;
+    max-width: 550px; /* Ancho profesional contenido */
+    background-color: var(--card-bg);
+    padding: 50px 45px;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3); /* Sombra profunda */
+    text-align: center;
+}
+
+/* ENCABEZADO */
+.pro-form-header {
+    margin-bottom: 35px;
+}
+
+.pro-form-title {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    margin-bottom: 8px;
+}
+
+.title-underline {
+    width: 60px;
+    height: 4px;
+    background-color: var(--accent-white); /* Línea blanca minimalista */
+    margin: 0 auto 20px;
+    border-radius: 2px;
+}
+
+.pro-form-subtitle {
+    font-size: 14px;
+    color: var(--text-muted);
+    font-weight: 400;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+/* FORMULARIO */
+.pro-form-box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left; /* Volvemos a alinear labels a la izquierda internamente */
+}
+
+/* AGRUPACIONES (FIELDSETS) */
+.form-section {
+    border: none;
+    margin-bottom: 10px;
+}
+
+.form-section legend {
+    font-size: 13px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+/* INPUTS CON ICONOS */
+.form-group-iconic {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.input-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+    font-size: 16px;
+    z-index: 10;
+}
+
+.input-row-pro {
+    display: flex;
+    gap: 12px;
+}
+
+/* ESTILO BASE DE INPUTS Y SELECTS */
+input,
+select {
+    width: 100%;
+    padding: 14px 14px 14px 45px; /* Padding izquierdo para el icono */
+    background-color: var(--input-bg);
+    border: 1px solid var(--input-border);
+    border-radius: 12px;
+    color: var(--text-main);
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+/* Placeholders claros */
+input::placeholder {
+    color: #6c757d;
+}
+
+/* Foco minimalista */
+input:focus,
+select:focus {
+    outline: none;
+    border-color: var(--accent-white);
+    background-color: var(--card-bg);
+}
+
+/* Arreglo específico para filas de inputs (nombres/apellidos) */
+.input-row-pro input {
+    flex: 1;
+}
+
+/* Estilo para el SELECT de documento */
+select {
+    appearance: none; /* Quita la flecha por defecto */
+    cursor: pointer;
+}
+
+/* Pequeña ayuda de contraseña */
+.pro-password-tip {
+    display: block;
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: -10px;
+    margin-bottom: 15px;
+    margin-left: 45px;
+}
+
+/* BOTONES (Inspirado en la referencia) */
+.pro-action-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.pro-btn-primary {
+    flex: 2; /* Botón principal más ancho */
+    padding: 16px;
+    background-color: var(--accent-white);
+    color: var(--accent-dark);
+    border: none;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.1s ease, opacity 0.2s;
+}
+
+.pro-btn-secondary {
+    flex: 1; /* Botón login más estrecho */
+    padding: 16px;
+    background-color: #f1f3f5; /* Gris muy claro/blanco sucio */
+    color: var(--accent-dark);
+    border: none;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+/*

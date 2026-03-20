@@ -1,0 +1,186 @@
+/* PALETA REFINADA: ANTRACITA & AZUL CALMADO */
+:root {
+    --bg-light: #f1f3f5;          /* Gris ultra claro para el fondo */
+    --card-white: #ffffff;
+    
+    /* El "Negro Calmado" (Antracita Profundo) */
+    --calm-black: #1a1c1e;        /* Panel derecho y textos principales */
+    --calm-black-hover: #2c2f33;
+    
+    /* Azul Ejecutivo (Menos eléctrico, más profesional) */
+    --executive-blue: #3e5cf4;    /* Para el botón de entrada */
+    --executive-blue-hover: #3149c6;
+    
+    --text-muted: #6a737d;        /* Gris para placeholders e iconos */
+    --input-bg: #f8f9fa;
+    --input-border: #dee2e6;
+}
+
+/* RESET */
+* {
+    margin: 0; padding: 0; box-sizing: border-box;
+}
+
+body.pro-login-body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: var(--calm-black);
+}
+
+/* CONTENEDOR PRINCIPAL */
+.login-split-container {
+    width: 100%;
+    max-width: 920px;
+    display: flex;
+    background-color: var(--card-white);
+    border-radius: 28px; 
+    box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+    overflow: hidden;
+    min-height: 560px;
+}
+
+/* PANEL IZQUIERDO (FORMULARIO) */
+.form-panel {
+    flex: 1.1;
+    padding: 50px 55px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-title {
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--calm-black);
+    margin-bottom: 35px;
+    letter-spacing: -0.8px;
+}
+
+/* INPUTS */
+.pro-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.input-group-pro {
+    position: relative;
+}
+
+.input-group-pro .icon {
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+    font-size: 15px;
+}
+
+.input-group-pro input, 
+.input-group-pro select {
+    width: 100%;
+    padding: 14px 14px 14px 50px;
+    background-color: var(--input-bg);
+    border: 1px solid var(--input-border);
+    border-radius: 12px;
+    color: var(--calm-black);
+    font-size: 14px;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.input-group-pro input:focus {
+    border-color: var(--executive-blue);
+    background-color: #fff;
+    box-shadow: 0 0 0 4px rgba(62, 92, 244, 0.05);
+}
+
+/* AJUSTE DEL BOTÓN PRINCIPAL */
+.btn-login-main {
+    margin-top: 10px;
+    padding: 15px;
+    background-color: var(--calm-black); /* Ahora es el negro calmado */
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-login-main:hover {
+    background-color: var(--calm-black-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.form-footer-link {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.link-secondary {
+    font-size: 13px;
+    color: var(--text-muted);
+    text-decoration: none;
+}
+
+.link-secondary:hover { color: var(--executive-blue); }
+
+/* PANEL DERECHO (EL NEGRO CALMADO) */
+.welcome-panel {
+    flex: 0.9;
+    background-color: var(--calm-black); /* Fondo calmado */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+    border-radius: 90px 0 0 90px;
+}
+
+.main-logo {
+    width: 110px;
+    margin-bottom: 25px;
+    filter: brightness(0) invert(1);
+}
+
+.welcome-title {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.welcome-subtitle {
+    font-size: 14px;
+    color: #94a3b8;
+    margin-bottom: 35px;
+    line-height: 1.5;
+    max-width: 250px;
+}
+
+/* BOTÓN REGISTRARSE (Outlined más sutil) */
+.btn-outlined-register {
+    padding: 11px 35px;
+    background-color: transparent;
+    color: white;
+    border: 1.5px solid rgba(255,255,255,0.2);
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-outlined-register:hover {
+    background-color: white;
+    color: var(--calm-black);
+    border-color: white;
+}

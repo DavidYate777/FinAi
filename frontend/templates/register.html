@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinAi | Registro Profesional</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="pro-register-body">
+
+<div class="pro-register-wrapper">
+    
+    <div class="pro-register-card">
+        
+        <div class="pro-form-header">
+            <h1 class="pro-form-title">Registro</h1>
+            <div class="title-underline"></div> <p class="pro-form-subtitle">Empieza a gestionar tus finanzas con inteligencia</p>
+        </div>
+
+        <form class="pro-form-box" method="POST" action="{{ url_for('auth.register') }}">
+
+            <fieldset class="form-section">
+                <legend>Datos Personales</legend>
+                
+                <div class="form-group-iconic">
+                    <i class="fas fa-user input-icon"></i>
+                    <div class="input-row-pro">
+                        <input type="text" name="first_name" placeholder="Primer nombre" required>
+                        <input type="text" name="second_name" placeholder="Segundo nombre (opcional)">
+                    </div>
+                </div>
+
+                <div class="form-group-iconic">
+                    <i class="fas fa-id-card input-icon"></i>
+                    <div class="input-row-pro">
+                        <input type="text" name="last_name" placeholder="Primer apellido" required>
+                        <input type="text" name="second_last_name" placeholder="Segundo apellido">
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset class="form-section">
+                <legend>Identificación</legend>
+                <div class="form-group-iconic">
+                    <i class="fas fa-fingerprint input-icon"></i>
+                    <select name="document_type" required>
+                        <option value="" disabled selected>Tipo de documento</option>
+                        <option value="CC">Cédula de ciudadanía</option>
+                        <option value="TI">Tarjeta de identidad</option>
+                        <option value="CE">Cédula de extranjería</option>
+                        <option value="PP">Pasaporte</option>
+                    </select>
+                </div>
+
+                <div class="form-group-iconic">
+                    <i class="fas fa-hashtag input-icon"></i>
+                    <input type="text" name="document_number" placeholder="Número de documento" required>
+                </div>
+            </fieldset>
+
+            <fieldset class="form-section">
+                <legend>Datos de Cuenta</legend>
+                <div class="form-group-iconic">
+                    <i class="fas fa-envelope input-icon"></i>
+                    <input type="email" name="email" placeholder="correo@ejemplo.com" required>
+                </div>
+
+                <div class="form-group-iconic">
+                    <i class="fas fa-lock input-icon"></i>
+                    <input type="password" name="password" placeholder="Contraseña segura" required>
+                </div>
+                <small class="pro-password-tip">Usa al menos 8 caracteres, letras y números</small>
+            </fieldset>
+
+            <div class="pro-action-buttons">
+                <button type="submit" class="pro-btn-primary">Crear cuenta</button>
+                <a href="{{ url_for('auth.login') }}" class="pro-btn-secondary">Login</a>
+            </div>
+
+        </form>
+
+    </div> </div> </body>
+</html>
