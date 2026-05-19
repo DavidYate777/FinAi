@@ -1,7 +1,7 @@
 # FinAi
 
 <p align="center">
-  <img src="logo_Fin_Ai.png" alt="Logo FinAi" width="200"/>
+  <img src="LOGO_FIN_AI.png" alt="Logo FinAi" width="200"/>
 </p>
 
 ## Descripción
