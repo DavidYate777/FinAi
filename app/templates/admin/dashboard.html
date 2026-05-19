@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinAi - Panel de Administración</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="dashboard-body">
+
+    <nav class="navbar">
+        <div class="nav-brand">FinAi Admin Panel</div>
+        <div class="nav-user">
+            Administrador | <strong>Admin General</strong>
+            <a href="{{ url_for('auth.login') }}" class="btn-logout">Cerrar Sesión</a>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="welcome-section">
+            <h1>Panel de Control del Sistema</h1>
+            <p>Monitoreo global de la plataforma e indicadores clave.</p>
+        </div>
+
+        <div class="metrics-container">
+            <div class="metric-card admin-stat">
+                <h3>Usuarios Registrados</h3>
+                <div class="value">1,248</div>
+            </div>
+            <div class="metric-card income">
+                <h3>Transacciones Totales</h3>
+                <div class="value">14,205</div>
+            </div>
+            <div class="metric-card saving">
+                <h3>Metas Activas</h3>
+                <div class="value">843</div>
+            </div>
+        </div>
+
+        <div class="data-section">
+            <h2>Últimos Usuarios Registrados</h2>
+            <table class="custom-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Correo Electrónico</th>
+                        <th>Fecha de Registro</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#1024</td>
+                        <td>Carlos Mendoza</td>
+                        <td>carlos@sena.edu.co</td>
+                        <td>18/05/2026</td>
+                        <td><span class="badge success">Activo</span></td>
+                    </tr>
+                    <tr>
+                        <td>#1023</td>
+                        <td>Laura Restrepo</td>
+                        <td>laura.res@uniminuto.edu</td>
+                        <td>17/05/2026</td>
+                        <td><span class="badge success">Activo</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+</body>
+</html>
