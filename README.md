@@ -11,6 +11,8 @@ FinAi es un sistema de gestión financiera desarrollado como proyecto académico
 ## Tecnologías Utilizadas
 
 * Python
+* Css
+* Html
 * MySQL
 * SQL
 * Git y GitHub
