@@ -34,5 +34,3 @@ FinAi es un sistema de gestión financiera desarrollado como proyecto académico
 ## Autores
 
 * Luis David Yate
-* Sebastian Herrera Garces
-* Juan David Ospina
